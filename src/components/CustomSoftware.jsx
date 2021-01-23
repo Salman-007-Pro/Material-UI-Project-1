@@ -154,13 +154,7 @@ const CustomSoftware = ({ setValue, setSelectedIndex }) => {
           </Typography>
           <img src={lightbulb} alt="lightbulb" />
         </Grid>
-        <Grid
-          item
-          md
-          align="center"
-          classes={{ root: classes.iconItem }}
-          //   style={{ marginTop: "8rem", marginBottom: "8rem" }}
-        >
+        <Grid item md align="center" classes={{ root: classes.iconItem }}>
           <Typography variant="h4" gutterBottom>
             Save Time
           </Typography>
@@ -389,7 +383,7 @@ const CustomSoftware = ({ setValue, setSelectedIndex }) => {
           md
           justify={matchesMD ? undefined : "flex-end"}
           alignItems={matchesMD ? "center" : undefined}
-          style={{ maxWidth: "40rem", minWidth: "37rem" }}
+          style={{ maxWidth: "40rem", minWidth: matchesMD ? 0 : "37rem" }}
         >
           <Grid item lg align={matchesMD ? "center" : "right"}>
             <Lottie
