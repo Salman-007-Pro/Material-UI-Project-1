@@ -218,7 +218,6 @@ const Header = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
       if (window.location.pathname === option.link) {
         if (option.activeIndex !== value) {
           setValue(option.activeIndex);
-          console.log(option.activeIndex);
           if (
             option?.selectedIndex &&
             option?.selectedIndex !== selectedIndex

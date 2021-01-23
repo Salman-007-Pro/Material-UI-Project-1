@@ -8,6 +8,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 //pages
 import LandingPage from "./LandingPage";
 import ServicePage from "./ServicePage";
+import CustomSoftware from "./CustomSoftware";
 
 const App = () => {
   const [value, setValue] = useState(0);
@@ -48,7 +49,13 @@ const App = () => {
           <Route
             exact
             path="/customsoftware"
-            component={() => <div>customsoftware</div>}
+            render={(props) => (
+              <CustomSoftware
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
           />
           <Route
             exact

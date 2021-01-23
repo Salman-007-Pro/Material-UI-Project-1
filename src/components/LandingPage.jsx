@@ -14,6 +14,7 @@ import Lottie from "react-lottie";
 
 //components
 import CallToAction from "./ui/CallToAction";
+
 //icon
 import ButtonArrow from "./ui/ButtonArrow";
 
@@ -259,7 +260,7 @@ const LandingPage = ({ setValue, setSelectedIndex }) => {
             </Grid>
           </Grid>
           <Grid sm lg={7} item className={classes.animation}>
-            <Lottie options={defaultOptions} width="100%" height="100%" />
+            <Lottie options={defaultOptions} width="100%" height="100%" isClickToPauseDisabled/>
           </Grid>
         </Grid>
       </Grid>
