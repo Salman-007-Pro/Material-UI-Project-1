@@ -81,7 +81,6 @@ const MobileApps = ({ setValue, setSelectedIndex }) => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const selectedHandle = (val) => {
@@ -155,7 +154,6 @@ const MobileApps = ({ setValue, setSelectedIndex }) => {
       <Grid
         item
         container
-        // direction={matchesSM ? "column" : "row"}
         direction="row"
         classes={{ root: classes.rowContainer }}
         style={{ marginTop: matchesXS ? "10em" : "12em" }}
