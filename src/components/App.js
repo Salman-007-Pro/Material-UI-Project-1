@@ -11,6 +11,7 @@ import ServicePage from "./ServicePage";
 import CustomSoftware from "./CustomSoftware";
 import MobileApps from "./MobileApps";
 import Websites from "./Websites";
+import Revolution from "./Revolution";
 
 const App = () => {
   const [value, setValue] = useState(0);
@@ -84,7 +85,13 @@ const App = () => {
           <Route
             exact
             path="/revolution"
-            component={() => <div>revolution</div>}
+            render={(props) => (
+              <Revolution
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
           />
           <Route exact path="/about" component={() => <div>about</div>} />
           <Route exact path="/contact" component={() => <div>contact</div>} />
