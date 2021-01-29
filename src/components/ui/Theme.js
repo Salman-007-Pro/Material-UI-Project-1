@@ -64,6 +64,7 @@ export default createMuiTheme({
       fontWeight: 500,
       fontFamily: "Raleway",
       color: arcBlue,
+      lineHeight: 1,
     },
     subtitle1: {
       fontSize: "1.25rem",
@@ -84,6 +85,28 @@ export default createMuiTheme({
       fontSize: "1rem",
       fontWeight: 300,
       color: arcGrey,
+    },
+  },
+  overrides: {
+    MuiInputLabel: {
+      root: {
+        color: arcBlue,
+        fontSize: "1rem",
+      },
+    },
+    MuiInput: {
+      root: {
+        color: arcGrey,
+        fontWeight: 300,
+      },
+      underline: {
+        "&:before": {
+          borderBottom: `2px solid ${arcBlue}`,
+        },
+        "&:hover:not($disabled):not($focused):not($error):before": {
+          borderBottom: `2px solid ${arcBlue}`,
+        },
+      },
     },
   },
 });

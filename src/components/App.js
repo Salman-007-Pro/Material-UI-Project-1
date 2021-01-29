@@ -12,6 +12,9 @@ import CustomSoftware from "./CustomSoftware";
 import MobileApps from "./MobileApps";
 import Websites from "./Websites";
 import Revolution from "./Revolution";
+import About from "./About";
+import Contact from "./Contact";
+import Estimate from "./Estimate";
 
 const App = () => {
   const [value, setValue] = useState(0);
@@ -93,9 +96,39 @@ const App = () => {
               />
             )}
           />
-          <Route exact path="/about" component={() => <div>about</div>} />
-          <Route exact path="/contact" component={() => <div>contact</div>} />
-          <Route exact path="/estimate" component={() => <div>estimate</div>} />
+          <Route
+            exact
+            path="/about"
+            render={(props) => (
+              <About
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/contact"
+            render={(props) => (
+              <Contact
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/estimate"
+            render={(props) => (
+              <Estimate
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
         </Switch>
         <Footer
           value={value}
